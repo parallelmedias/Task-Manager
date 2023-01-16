@@ -110,51 +110,51 @@ const TaskList = () => {
 
   return (
     <div>
-      <div className="task-header">
-        <h2>Task Manager</h2>
-          <TaskForm
-            name={name}
-            handleInputChange={handleInputChange}
-            createTask={createTask}
-            isEditing={isEditing}
-            updateTask={updateTask}
-          />
-      </div>
-      {tasks.length > 0 && (
-        <div className="--flex-between --pb">
-          <p>
-            <b>Total Tasks:</b> {tasks.length}
-          </p>
-          <p>
-            <b>Completed Tasks:</b> {completedTasks.length}
-          </p>
-        </div>
-      )}
+      <h2>Task Manager</h2>
+      <TaskForm
+        name={name}
+        handleInputChange={handleInputChange}
+        createTask={createTask}
+        isEditing={isEditing}
+        updateTask={updateTask}
+      />
+        <div>
+        {tasks.length > 0 && (
+          <div className="--flex-between --pb">
+            <p>
+              <b>Total Tasks:</b> {tasks.length}
+            </p>
+            <p>
+              <b>Completed Tasks:</b> {completedTasks.length}
+            </p>
+          </div>
+        )}
 
-      <hr />
-      {isLoading && (
-        <div className="--flex-center">
-          <img src={loadingImg} alt="Loading" />
-        </div>
-      )}
-      {!isLoading && tasks.length === 0 ? (
-        <p className="--py">No task added. Please add a task</p>
-      ) : (
-        <>
-          {tasks.map((task, index) => {
-            return (
-              <Task
-                key={task._id}
-                task={task}
-                index={index}
-                deleteTask={deleteTask}
-                getSingleTask={getSingleTask}
-                setToComplete={setToComplete}
-              />
-            );
-          })}
-        </>
-      )}
+        <hr />
+        {isLoading && (
+          <div className="--flex-center">
+            <img src={loadingImg} alt="Loading" />
+          </div>
+        )}
+        {!isLoading && tasks.length === 0 ? (
+          <p className="--py">No task added. Please add a task</p>
+        ) : (
+          <>
+            {tasks.map((task, index) => {
+              return (
+                <Task
+                  key={task._id}
+                  task={task}
+                  index={index}
+                  deleteTask={deleteTask}
+                  getSingleTask={getSingleTask}
+                  setToComplete={setToComplete}
+                />
+              );
+            })}
+          </>
+        )}
+      </div>
     </div>
   );
 };
