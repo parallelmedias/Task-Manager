@@ -3,7 +3,8 @@ import { useEffect, useState } from "react";
 import { toast } from "react-toastify";
 import { URL } from "../App";
 import Task from "./Task";
-import TaskForm from "./TaskForm";
+import TaskTotal from "./TaskTotal";
+
 import loadingImg from "../assets/loader.gif";
 
 // http://localhost:5000/api/tasks
@@ -110,7 +111,7 @@ const TaskList = () => {
 
   return (
     <div>
-      <h2>Task Manager</h2>
+      <Header />
       <TaskForm
         name={name}
         handleInputChange={handleInputChange}
@@ -118,43 +119,32 @@ const TaskList = () => {
         isEditing={isEditing}
         updateTask={updateTask}
       />
-        <div>
-        {tasks.length > 0 && (
-          <div className="--flex-between --pb">
-            <p>
-              <b>Total Tasks:</b> {tasks.length}
-            </p>
-            <p>
-              <b>Completed Tasks:</b> {completedTasks.length}
-            </p>
-          </div>
-        )}
+      <TaskTotal tasks={tasks} completedTasks={completedTasks} />
 
-        <hr />
-        {isLoading && (
-          <div className="--flex-center">
-            <img src={loadingImg} alt="Loading" />
-          </div>
-        )}
-        {!isLoading && tasks.length === 0 ? (
-          <p className="--py">No task added. Please add a task</p>
-        ) : (
-          <>
-            {tasks.map((task, index) => {
-              return (
-                <Task
-                  key={task._id}
-                  task={task}
-                  index={index}
-                  deleteTask={deleteTask}
-                  getSingleTask={getSingleTask}
-                  setToComplete={setToComplete}
-                />
-              );
-            })}
-          </>
-        )}
-      </div>
+      <hr />
+      {isLoading && (
+            <div className="--flex-center">
+              <img src={loadingImg} alt="Loading" />
+            </div>
+          )}
+          {!isLoading && tasks.length === 0 ? (
+            <p className="--py">No task added. Please add a task</p>
+          ) : (
+            <>
+              {tasks.map((task, index) => {
+                return (
+                  <Task
+                    key={task._id}
+                    task={task}
+                    index={index}
+                    deleteTask={deleteTask}
+                    getSingleTask={getSingleTask}
+                    setToComplete={setToComplete}
+                  />
+                );
+              })}
+            </>
+          )}
     </div>
   );
 };
