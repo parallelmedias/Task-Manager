@@ -478,7 +478,7 @@ a:hover {
   height: 4rem;
   font-size: 1.8rem;
   cursor: pointer;
-  background-color: var(--color-purple);
+  background-color: #789;
   color: #fff;
   border: none;
   transition: all 0.3s;
