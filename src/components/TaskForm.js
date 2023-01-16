@@ -14,7 +14,7 @@ const TaskForm = ({
         value={name}
         onChange={handleInputChange}
       />
-      <button type="submit">{isEditing ? "Edit" : "Add"}</button>
+      <button className="--btn" type="submit">{isEditing ? "Edit" : "Add"}</button>
     </form>
   );
 };

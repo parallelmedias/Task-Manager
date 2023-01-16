@@ -68,28 +68,22 @@ section {
   justify-content: space-between;
   align-items: center;
 }
-
 .--dir-column {
   flex-direction: column;
 }
-
 .--flex-dir-column {
   display: flex;
 }
-
 .--align-center {
   display: flex;
   align-items: center;
 }
-
 .--100vh {
   height: 100vh;
 }
-
 .--mh-100vh {
   min-height: 100vh;
 }
-
 /* Grid */
 .--grid-15 {
   display: grid;
@@ -172,25 +166,6 @@ p {
 }
 .--fw-thin {
   font-weight: 200;
-}
-
-/* Text Color */
-.--text-light {
-  color: #fff;
-}
-
-.--color-primary {
-  color: #007bff;
-}
-.--color-danger {
-  color: orangered;
-}
-.--color-success {
-  color: #28a745;
-}
-
-.--color-white {
-  color: #fff;
 }
 
 /* Center Text */
