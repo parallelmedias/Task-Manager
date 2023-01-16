@@ -110,14 +110,16 @@ const TaskList = () => {
 
   return (
     <div>
-      <h2>Task Manager</h2>
-      <TaskForm
-        name={name}
-        handleInputChange={handleInputChange}
-        createTask={createTask}
-        isEditing={isEditing}
-        updateTask={updateTask}
-      />
+      <div className="task-header">
+        <h2>Task Manager</h2>
+          <TaskForm
+            name={name}
+            handleInputChange={handleInputChange}
+            createTask={createTask}
+            isEditing={isEditing}
+            updateTask={updateTask}
+          />
+      </div>
       {tasks.length > 0 && (
         <div className="--flex-between --pb">
           <p>

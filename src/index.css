@@ -437,9 +437,10 @@ a:hover {
 .app {
   width: 100%;
   min-height: 100vh;
-  background: linear-gradient(342deg,#d42536,#2f9067,#ef642d,#a7cc7a);
+  background-color: lightslategrey;
+  /* background: linear-gradient(342deg,#d42536,#2f9067,#ef642d,#a7cc7a);
   background-size: 240% 240%;
-  animation: gradient-animation 24s ease infinite;
+  animation: gradient-animation 24s ease infinite; */
   display: flex;
   justify-content: center;
   align-items: start;
