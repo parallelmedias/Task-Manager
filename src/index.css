@@ -367,7 +367,7 @@ p {
   margin-right: 1rem;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (min-width: 300px) {
   .--flex-dir-column {
     flex-direction: column;
   }
@@ -449,7 +449,7 @@ a:hover {
 
 .task-container {
   width: 100%;
-  min-width: 500px;
+  min-width: 300px;
   height: auto;
   background-color: #fff;
   border: 1px solid transparent;
