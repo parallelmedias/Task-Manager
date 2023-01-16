@@ -112,7 +112,7 @@ const TaskList = () => {
   return (
     <div>
       <TaskForm
-        name={inputName}
+        name={name}
         handleInputChange={handleInputChange}
         createTask={createTask}
         isEditing={isEditing}

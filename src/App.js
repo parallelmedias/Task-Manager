@@ -4,6 +4,7 @@ import TaskList from "./components/TaskList";
 import Header from "./components/Header";
 import tasks from "./components/Task";
 import TaskTotal from "./components/TaskTotal";
+import completedTasks from "./components/Task";
 
 export const URL = process.env.REACT_APP_SERVER_URL;
 
