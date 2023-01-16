@@ -1,6 +1,11 @@
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import TaskList from "./components/TaskList";
+import Header from "./components/Header";
+import tasks from "./components/Task";
+import TaskForm from "./components/TaskForm";
+import TaskTotal from "./components/TaskTotal";
+
 
 export const URL = process.env.REACT_APP_SERVER_URL;
 
@@ -8,7 +13,16 @@ function App() {
   return (
     <div className="app">
       <div className="task-container">
-        <TaskList />
+        <Header />
+        <TaskForm
+        name={name}
+        handleInputChange={handleInputChange}
+        createTask={createTask}
+        isEditing={isEditing}
+        updateTask={updateTask}
+      />
+      <TaskTotal tasks={tasks} completedTasks={completedTasks} />
+      <TaskList />
       </div>
       <ToastContainer />
     </div>

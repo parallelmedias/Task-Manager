@@ -9,8 +9,6 @@ import Header from "./Header";
 
 import loadingImg from "../assets/loader.gif";
 
-// http://localhost:5000/api/tasks
-
 const TaskList = () => {
   const [tasks, setTasks] = useState([]);
   const [completedTasks, setCompletedTasks] = useState([]);
@@ -113,16 +111,6 @@ const TaskList = () => {
 
   return (
     <div>
-      <Header />
-      <TaskForm
-        name={name}
-        handleInputChange={handleInputChange}
-        createTask={createTask}
-        isEditing={isEditing}
-        updateTask={updateTask}
-      />
-      <TaskTotal tasks={tasks} completedTasks={completedTasks} />
-
       <hr />
       {isLoading && (
             <div className="--flex-center">
