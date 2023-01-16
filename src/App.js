@@ -6,7 +6,6 @@ import tasks from "./components/Task";
 import TaskForm from "./components/TaskForm";
 import TaskTotal from "./components/TaskTotal";
 
-
 export const URL = process.env.REACT_APP_SERVER_URL;
 
 function App() {
@@ -14,14 +13,8 @@ function App() {
     <div className="app">
       <div className="task-container">
         <Header />
-        <TaskForm
-        name={name}
-        handleInputChange={handleInputChange}
-        createTask={createTask}
-        isEditing={isEditing}
-        updateTask={updateTask}
-      />
-      <TaskTotal tasks={tasks} completedTasks={completedTasks} />
+        {/* <TaskForm /> */}
+        <TaskTotal tasks={tasks} completedTasks={completedTasks} />
       <TaskList />
       </div>
       <ToastContainer />

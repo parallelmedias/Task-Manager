@@ -111,6 +111,13 @@ const TaskList = () => {
 
   return (
     <div>
+      <TaskForm
+        name={inputName}
+        handleInputChange={handleInputChange}
+        createTask={createTask}
+        isEditing={isEditing}
+        updateTask={updateTask}
+      />
       <hr />
       {isLoading && (
             <div className="--flex-center">
