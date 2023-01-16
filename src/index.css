@@ -437,16 +437,30 @@ a:hover {
 .app {
   width: 100%;
   min-height: 100vh;
-  background-color: var(--color-primary);
+  background: linear-gradient(342deg,#d42536,#2f9067,#ef642d,#a7cc7a);
+  background-size: 240% 240%;
+  animation: gradient-animation 24s ease infinite;
   display: flex;
   justify-content: center;
   align-items: start;
   padding: 0 10px;
 }
 
+@keyframes gradient-animation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
 .task-container {
   width: 100%;
-  max-width: 500px;
+  min-width: 500px;
   height: auto;
   background-color: #fff;
   border: 1px solid transparent;
