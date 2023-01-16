@@ -3,7 +3,6 @@ import "react-toastify/dist/ReactToastify.css";
 import TaskList from "./components/TaskList";
 import Header from "./components/Header";
 import tasks from "./components/Task";
-import TaskForm from "./components/TaskForm";
 import TaskTotal from "./components/TaskTotal";
 
 export const URL = process.env.REACT_APP_SERVER_URL;
