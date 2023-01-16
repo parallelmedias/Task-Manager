@@ -1,5 +1,5 @@
 import tasks from "./Task"
-import completedTasks from "./Task"
+import completedTasks from "./TaskList"
 
 function TaskTotal() {
   return (
