@@ -1,3 +1,6 @@
+import tasks from "./Task"
+import completedTasks from "./Task"
+
 function TaskTotal() {
   return (
     <div>

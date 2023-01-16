@@ -4,6 +4,8 @@ import { toast } from "react-toastify";
 import { URL } from "../App";
 import Task from "./Task";
 import TaskTotal from "./TaskTotal";
+import TaskForm from "./TaskForm";
+import Header from "./Header";
 
 import loadingImg from "../assets/loader.gif";
 
