@@ -1,6 +1,6 @@
 function Header() {
   return (
-    <div>
+    <div className="Header">
         <h2>Task Manager</h2>
     </div>
   )
