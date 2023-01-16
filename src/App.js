@@ -16,8 +16,10 @@ function App() {
         {/* <TaskForm /> */}
         <TaskTotal tasks={tasks} completedTasks={completedTasks} />
       </div>
-      <TaskList />
-      <ToastContainer />
+      <div className="task-body">
+        <TaskList />
+        <ToastContainer />
+      </div>
     </div>
   );
 }
